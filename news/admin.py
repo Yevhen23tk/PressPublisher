@@ -10,17 +10,15 @@ class RedactorAdmin(UserAdmin):
     search_fields = ('username', 'email', 'first_name', 'last_name')
 
 
-# Register the Newspaper model
 @admin.register(Newspaper)
 class NewspaperAdmin(admin.ModelAdmin):
-    list_display = ('title', 'published_date')  # Make sure these fields exist in the Newspaper model
+    list_display = ('title', 'published_date')
     search_fields = ('title',)
     list_filter = ('published_date',)
-    filter_horizontal = ('topics', 'publishers')  # For ManyToMany fields
+    filter_horizontal = ('topics', 'publishers')
 
 
-# Register the Topic model
 @admin.register(Topic)
 class TopicAdmin(admin.ModelAdmin):
-    list_display = ('name',)  # The "Topic" model has a "name" field
+    list_display = ('name',)
     search_fields = ('name',)

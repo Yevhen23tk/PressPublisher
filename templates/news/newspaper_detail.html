@@ -1,0 +1,13 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Newspaper's detail{% endblock %}
+
+{% block content %}
+  <h1>{{ newspaper.title }}</h1>
+  <p>{{ newspaper.content }}</p>
+  <br>
+  <hr>
+  <p>{{ newspaper.publishers }} ({{ newspaper.published_date }})</p>
+
+  <a href="{% url 'news:index' %} " class="btn btn-secondary">Home</a>
+{% endblock %}

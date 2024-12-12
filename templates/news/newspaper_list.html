@@ -1,0 +1,25 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}News paper's list{% endblock %}
+
+{% block content %}  <h1>
+    Newspaper's list
+    <a href="{% url 'news:newspaper-create' %}" class="btn btn-primary link-to-page">
+      Create
+    </a>
+  </h1>
+  {% if newspaper_list %}
+    <ul>
+      {% for newspaper in newspaper_list %}
+        <li>
+          <a href="{% url "news:newspaper-detail" pk=newspaper.id %} ">{{ newspaper.title }}</a>
+          <br>
+          {{ newspaper.title }} ({{ newspaper.content }}, {{ newspaper.publishers.name }})
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>There are no news in newspapers</p>
+  {% endif %}
+    <a href="{% url 'news:index' %} " class="btn btn-secondary">Home</a>
+{% endblock %}
