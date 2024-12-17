@@ -70,16 +70,15 @@
                   </div>
                   Account
                 </h6>
-                <a href="/page-sign-in.html" class="dropdown-item border-radius-md">
-                  Sign In
-                </a>
-                <a href="/page-sign-up.html" class="dropdown-item border-radius-md">
-                  Register
-                </a>
-                <a href="/page-404.html" class="dropdown-item border-radius-md">
-                  Error 404
-                </a>
-              </div>
+                  <a href="{% url 'login' %}" class="dropdown-item border-radius-md">
+                    Sign In
+                  </a>
+                  <form action="{% url 'logout' %}" method="post" class="dropdown-item border-radius-md p-0 m-0">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-link p-0 border-0 text-start" style="color: inherit; text-decoration: none;">
+                      Logout
+                    </button>
+                  </form>
               <div class="d-lg-none">
                 <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center px-0">
                   <div class="d-inline-block">
@@ -130,13 +129,13 @@
                   </div>
                   Account
                 </h6>
-                <a href="/page-sign-in.html" class="dropdown-item border-radius-md">
+                <a href="{% url 'login' %}" class="dropdown-item border-radius-md">
                   Sign In
                 </a>
-                <a href="/page-sign-up.html" class="dropdown-item border-radius-md">
+                <a href="{% url 'login' %}" class="dropdown-item border-radius-md">
                   Register
                 </a>
-                <a href="/page-404.html" class="dropdown-item border-radius-md">
+                <a href="{% url 'logout' %}" class="dropdown-item border-radius-md">
                   Error 404
                 </a>
               </div>

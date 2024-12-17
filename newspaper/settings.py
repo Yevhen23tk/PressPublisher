@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "debug_toolbar",
     "crispy_forms",
     "crispy_bootstrap4",
     "news",
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -121,6 +123,11 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 
 ASSETS_ROOT = '/static/assets/'
 
+LOGIN_REDIRECT_URL = "/"
+# LOGIN_URL = '/accounts/login/'
+# LOGOUT_URL = '/'
+# LOGOUT_REDIRECT_URL = '/'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
@@ -131,3 +138,7 @@ AUTH_USER_MODEL = 'news.Redactor'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]

@@ -1,25 +1,7 @@
-{#{% extends 'layouts/base.html' %}#}
-{#{% load crispy_forms_filters %}#}
-{##}
-{##}
-{#{% block title %}Create News {% endblock %}#}
-{##}
-{#{% block content %}#}
-{#  {% include "includes/navigation-light.html" %}#}
-{#  <h1>{{ object|yesno:"Update,Create" }} news</h1>#}
-{#  <form action="" method="post" novalidate>#}
-{#    {% csrf_token %}#}
-{#    {{ form|crispy }}#}
-{##}
-{#    <input type="submit" value="Submit" class="btn btn-primary">#}
-{#  </form>#}
-{#{% endblock %}#}
-
-
 {% extends 'layouts/base.html' %}
 {% load crispy_forms_filters %}
 
-{% block title %}Create News{% endblock %}
+{% block title %}New Redactor{% endblock %}
 
 {% block content %}
 {% include "includes/navigation-light.html" %}
@@ -27,7 +9,7 @@
 <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <h1 class="display-6 mb-4">{{ object|yesno:"Update,Create" }} News</h1>
+            <h1 class="display-6 mb-4">{{ object|yesno:"Update,Create" }} Redactor</h1>
             <div class="card shadow-sm">
                 <div class="card-body">
                     <form action="" method="post" novalidate>

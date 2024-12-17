@@ -68,15 +68,12 @@
                   </div>
                   Account
                 </h6>
-                <a href="/page-sign-in.html" class="dropdown-item border-radius-md">
-                  Sign In
-                </a>
-                <a href="/page-sign-up.html" class="dropdown-item border-radius-md">
-                  Register
-                </a>
-                <a href="/page-404.html" class="dropdown-item border-radius-md">
-                  Error 404
-                </a>
+{#                <a href="{% url 'login' %}" class="dropdown-item border-radius-md">#}
+{#                  Sign In#}
+{#                </a>#}
+{#                <a href="{% url 'logout' %}" class="dropdown-item border-radius-md">#}
+{#                  Logout#}
+{#                </a>#}
               </div>
               <div class="d-lg-none">
                 <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center px-0">
@@ -128,13 +125,13 @@
                   </div>
                   Account
                 </h6>
-                <a href="/page-sign-in.html" class="dropdown-item border-radius-md">
+                <a href="{% url 'login' %}" class="dropdown-item border-radius-md">
                   Sign In
                 </a>
-                <a href="/page-sign-up.html" class="dropdown-item border-radius-md">
+                <a href="{% url 'login' %}" class="dropdown-item border-radius-md">
                   Register
                 </a>
-                <a href="/page-404.html" class="dropdown-item border-radius-md">
+                <a href="{% url 'login' %}" class="dropdown-item border-radius-md">
                   Error 404
                 </a>
               </div>

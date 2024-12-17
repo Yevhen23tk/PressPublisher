@@ -1,13 +1,55 @@
+{#{% extends 'layouts/base.html' %}#}
+{##}
+{#{% block title %} Newspaper's detail{% endblock %}#}
+{##}
+{#{% block content %}#}
+{#  {% include "includes/navigation-light.html" %}#}
+{#  <h1>{{ newspaper.title }}</h1>#}
+{#  <p>{{ newspaper.content }}</p>#}
+{#  <br>#}
+{#  <hr>#}
+{#  <p>{{ newspaper.publishers }} ({{ newspaper.published_date }})</p>#}
+{##}
+{#  <a href="{% url 'news:index' %} " class="btn btn-secondary">Home</a>#}
+{#{% endblock %}#}
+
+
 {% extends 'layouts/base.html' %}
 
-{% block title %} Newspaper's detail{% endblock %}
+{% block title %}Newspaper Detail{% endblock %}
 
 {% block content %}
-  <h1>{{ newspaper.title }}</h1>
-  <p>{{ newspaper.content }}</p>
-  <br>
-  <hr>
-  <p>{{ newspaper.publishers }} ({{ newspaper.published_date }})</p>
+{% include "includes/navigation-light.html" %}
 
-  <a href="{% url 'news:index' %} " class="btn btn-secondary">Home</a>
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h1 class="card-title display-6 mb-4">{{ newspaper.title }}</h1>
+
+                    <p class="card-text mb-4">{{ newspaper.content }}</p>
+
+                    <hr>
+
+                    <p class="text-muted mb-0">
+                        Published by: <strong>{{ newspaper.publishers }}</strong><br>
+                        <small>Published on: {{ newspaper.published_date }}</small>
+                      <br>
+                      <a href="{% url 'news:newspaper-update' pk=newspaper.id%}" class="btn btn-secondary link-to-page" style="float: initial">
+                        Update
+                      </a>
+                      <a href="{% url 'news:newspaper-detail' pk=newspaper.id %}" class="btn btn-danger link-to-page" style="float: initial">
+                        Delete
+                      </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <a href="{% url 'news:index' %}" class="btn btn-secondary">Home</a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
