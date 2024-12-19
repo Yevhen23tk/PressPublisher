@@ -14,7 +14,6 @@ class NewspaperCreationForm(forms.ModelForm):
         widget=forms.CheckboxSelectMultiple(),
         required=False,
     )
-    published_date = forms.DateField(widget=forms.SelectDateWidget)
 
     class Meta:
         model = Newspaper
@@ -33,6 +32,19 @@ class NewspaperUpdateForm(forms.ModelForm):
         fields = ("title", "content", "topics",)
 
 
+class NewspaperSearchForm(forms.Form):
+    title = forms.CharField(
+        max_length=100,
+        required=False,
+        label="",
+        widget=forms.TextInput(
+            attrs={
+                "placeholder": "Search of title"
+            }
+        )
+    )
+
+
 class TopicCreateForm(forms.ModelForm):
     class Meta:
         model = Topic
@@ -43,6 +55,19 @@ class TopicUpdateForm(forms.ModelForm):
     class Meta:
         model = Topic
         fields = "__all__"
+
+
+class TopicSearchForm(forms.Form):
+    topic = forms.CharField(
+        max_length=100,
+        required=False,
+        label="",
+        widget=forms.TextInput(
+            attrs={
+                "placeholder": "Search of title"
+            }
+        )
+    )
 
 
 class RedactorCreateForm(forms.ModelForm):
@@ -58,4 +83,31 @@ class RedactorCreateForm(forms.ModelForm):
 class RedactorUpdateForm(forms.ModelForm):
     class Meta:
         model = Redactor
-        fields = "__all__"
+        fields = ("first_name",
+                  "last_name",
+                  "username",
+                  "email",
+                  )
+
+
+class RedactorSearchForm(forms.Form):
+    first_name = forms.CharField(
+        max_length=100,
+        required=False,
+        label="",
+        widget=forms.TextInput(
+            attrs={
+                "placeholder": "Search by first name..."
+            }
+        )
+    )
+    # last_name = forms.CharField(
+    #     max_length=100,
+    #     required=False,
+    #     label="",
+    #     widget=forms.TextInput(
+    #         attrs={
+    #             "placeholder": "Search of last name"
+    #         }
+    #     )
+    # )

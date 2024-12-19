@@ -44,14 +44,17 @@
                         </div>
                         News list
                       </h6>
-                      <a href="/page-about-us.html" class="dropdown-item border-radius-md">
+                      <a href="{% url 'news:redactor-list' %}" class="dropdown-item border-radius-md">
                         Redactors
                       </a>
-                      <a href="/page-contact-us.html" class="dropdown-item border-radius-md">
-                        Contact Us
+                      <a href="{% url 'news:topic-list' %}" class="dropdown-item border-radius-md">
+                        Topics
                       </a>
-                      <a href="/page-author.html" class="dropdown-item border-radius-md">
-                        Author
+                      <a href="{% url 'news:newspaper-list' %}" class="dropdown-item border-radius-md">
+                        News
+                      </a>
+                      <a href="#" class="dropdown-item border-radius-md">
+                        About us
                       </a>
                       <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center px-0 mt-3">
                         <div class="d-inline-block">
@@ -78,7 +81,7 @@
                       </a>
                           <form action="{% url 'logout' %}" method="post" style="display:inline;">
                             {% csrf_token %}
-                            <button type="submit" class="dropdown-item border-radius-md"">
+                            <button type="submit" class="dropdown-item border-radius-md">
                               Logout
                             </button>
                           </form>
@@ -105,7 +108,7 @@
                         Landing Pages
                       </h6>
                       <a href="/page-about-us.html" class="dropdown-item border-radius-md">
-                        About Us
+                        About Us---
                       </a>
                       <a href="/page-contact-us.html" class="dropdown-item border-radius-md">
                         Contact Us
@@ -142,19 +145,6 @@
                 <li class="nav-item ms-lg-auto">
                       {% if user.is_authenticated %}
                           <span>User: <a href="{{ user.get_absolute_url }}">{{ user.get_username }}</a></span>
-{#                          <form action="{% url 'logout' %}" method="post" style="display:inline;">#}
-
-
-{#                        <li class="list-group-item">#}
-{#                          <form action="{% url 'logout' %}" method="post" style="display:inline;">#}
-{#                            {% csrf_token %}#}
-{#                            <button type="submit" class="btn btn-link p-0 border-0" style="color:inherit;text-decoration:none;">#}
-{#                              Logout#}
-{#                            </button>#}
-{#                          </form>#}
-{#                        </li>#}
-{#                      {% else %}#}
-{#                          <a href="{% url 'login' %}?next={{ request.path }}">Login</a>#}
                       {% endif %}
                   {% if user.is_authenticated %}
                     <i class="fa fa-sign-out me-1"></i>
