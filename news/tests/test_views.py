@@ -2,7 +2,7 @@ from django.test import TestCase, Client
 from django.urls import reverse
 from django.contrib.auth import get_user_model
 from django.utils.timezone import now
-from news.models import Newspaper, Topic, Redactor
+from news.models import Newspaper
 
 User = get_user_model()
 
@@ -10,24 +10,29 @@ User = get_user_model()
 class LoginRequiredViewsTest(TestCase):
     def setUp(self):
         self.client = Client()
-        self.user = User.objects.create_user(username="testuser", password="secret")
+        self.user = User.objects.create_user(
+            username="testuser",
+            password="secret"
+        )
         self.newspaper = Newspaper.objects.create(
-            title="Test Paper", content="Test content", published_date=now()
+            title="Test Paper",
+            content="Test content", published_date=now()
         )
         self.create_url = reverse("news:newspaper-create")
         self.list_url = reverse("news:newspaper-list")
-        self.detail_url = reverse("news:newspaper-detail", args=[self.newspaper.pk])
+        self.detail_url = reverse(
+            "news:newspaper-detail",
+            args=[self.newspaper.pk]
+        )
 
     def login(self):
         self.client.login(username="testuser", password="secret")
 
     def assert_redirects_to_login(self, url):
-        """Helper to assert that a given URL redirects to login when not authenticated."""
         response = self.client.get(url)
         self.assertRedirects(response, f"{reverse('login')}?next={url}")
 
     def login_and_get(self, url):
-        """Helper to login and then perform a GET request to the specified URL."""
         self.login()
         return self.client.get(url)
 
@@ -41,24 +46,19 @@ class LoginRequiredViewsTest(TestCase):
         self.assertTemplateUsed(response, "news/newspaper_list.html")
 
     def test_detail_view_requires_login(self):
-        # Without login
         self.assert_redirects_to_login(self.detail_url)
 
-        # After login
         response = self.login_and_get(self.detail_url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "news/newspaper_detail.html")
 
     def test_create_view_requires_login(self):
-        # Without login
         self.assert_redirects_to_login(self.create_url)
 
-        # After login
         response = self.login_and_get(self.create_url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "news/newspaper_form.html")
 
-        # Test creating a newspaper
         data = {
             "title": "New Title",
             "content": "New content",

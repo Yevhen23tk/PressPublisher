@@ -21,22 +21,6 @@ from news.models import (Newspaper,
                          Redactor)
 
 
-# @login_required
-# def index(request):
-#     num_newspapers = Newspaper.objects.count()
-#     num_topics = Topic.objects.count()
-#     num_redactors = Redactor.objects.count()
-#     num_visits = request.session.get("num_visits", 0)
-#     request.session["num_visits"] = num_visits + 1
-#
-#     context = {
-#         "num_newspapers": num_newspapers,
-#         "num_topics": num_topics,
-#         "num_redactors": num_redactors,
-#         "num_visits": num_visits + 1,
-#     }
-#
-#     return render(request, "news/index.html", context=context)
 class IndexView(TemplateView):
     template_name = "news/index.html"
 
@@ -163,7 +147,11 @@ class RedactorListView(LoginRequiredMixin, generic.ListView):
 
         first_name = self.request.GET.get("first_name", "")
 
-        context["search_form"] = RedactorSearchForm(initial={"first_name": first_name})
+        context["search_form"] = RedactorSearchForm(
+            initial={
+                "first_name": first_name
+            }
+        )
         return context
 
     def get_queryset(self):

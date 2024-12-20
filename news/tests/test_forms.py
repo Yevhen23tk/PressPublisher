@@ -5,10 +5,7 @@ from news.forms import (
     NewspaperUpdateForm,
     NewspaperSearchForm,
     TopicCreateForm,
-    TopicUpdateForm,
-    TopicSearchForm,
     RedactorCreateForm,
-    RedactorUpdateForm,
     RedactorSearchForm,
 )
 
@@ -79,7 +76,7 @@ class NewspaperSearchFormTest(TestCase):
     def test_empty_search_form(self):
         data = {}
         form = NewspaperSearchForm(data=data)
-        self.assertTrue(form.is_valid())  # Empty search forms should still be valid
+        self.assertTrue(form.is_valid())
 
 
 class TopicCreateFormTest(TestCase):

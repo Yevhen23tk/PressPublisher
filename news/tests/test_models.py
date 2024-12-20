@@ -23,7 +23,6 @@ class TopicModelTest(TestCase):
     def test_unique_topic_name(self):
         Topic.objects.create(name="Health")
         with self.assertRaises(IntegrityError):
-            # Attempt to create another topic with the same name
             Topic.objects.create(name="Health")
 
 
@@ -47,7 +46,8 @@ class NewspaperModelTest(TestCase):
 
     def test_newspaper_str(self):
         newspaper = Newspaper.objects.create(
-            title="Global News", content="A brief content about global events."
+            title="Global News",
+            content="A brief content about global events."
         )
         self.assertEqual(str(newspaper), "Global News")
 
@@ -55,12 +55,12 @@ class NewspaperModelTest(TestCase):
         newspaper = Newspaper.objects.create(
             title="Daily Tech Update", content="All the latest in tech."
         )
-        # The default is `now`, which is a datetime with timezone. We only check the date.
         self.assertEqual(newspaper.published_date, localdate())
 
     def test_newspaper_topics(self):
         newspaper = Newspaper.objects.create(
-            title="Science Weekly", content="Focus on recent scientific discoveries."
+            title="Science Weekly",
+            content="Focus on recent scientific discoveries."
         )
         newspaper.topics.set([self.topic_science, self.topic_politics])
         self.assertEqual(newspaper.topics.count(), 2)
@@ -69,7 +69,8 @@ class NewspaperModelTest(TestCase):
 
     def test_newspaper_publishers(self):
         newspaper = Newspaper.objects.create(
-            title="Political Daily", content="Today's political headlines."
+            title="Political Daily",
+            content="Today's political headlines."
         )
         newspaper.publishers.set([self.redactor_jane, self.redactor_bob])
         self.assertEqual(newspaper.publishers.count(), 2)

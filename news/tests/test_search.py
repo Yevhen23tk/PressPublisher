@@ -8,11 +8,12 @@ User = get_user_model()
 
 class NewspaperSearchTest(TestCase):
     def setUp(self):
-        # Create user and log in
-        self.user = User.objects.create_user(username="testuser", password="secret")
+        self.user = User.objects.create_user(
+            username="testuser",
+            password="secret"
+        )
         self.client.login(username="testuser", password="secret")
 
-        # Create newspapers
         self.paper1 = Newspaper.objects.create(
             title="Breaking News", content="Some breaking news content."
         )
@@ -35,11 +36,12 @@ class NewspaperSearchTest(TestCase):
 
 class TopicSearchTest(TestCase):
     def setUp(self):
-        # Create user and log in
-        self.user = User.objects.create_user(username="testuser", password="secret")
+        self.user = User.objects.create_user(
+            username="testuser",
+            password="secret"
+        )
         self.client.login(username="testuser", password="secret")
 
-        # Create topics
         self.topic1 = Topic.objects.create(name="Technology")
         self.topic2 = Topic.objects.create(name="Health")
         self.url = reverse("news:topic-list")
@@ -58,11 +60,15 @@ class TopicSearchTest(TestCase):
 
 class RedactorSearchTest(TestCase):
     def setUp(self):
-        # Create user and log in
-        self.user = User.objects.create_user(username="testuser", password="secret")
-        self.client.login(username="testuser", password="secret")
+        self.user = User.objects.create_user(
+            username="testuser",
+            password="secret"
+        )
+        self.client.login(
+            username="testuser",
+            password="secret"
+        )
 
-        # Create redactors
         self.redactor1 = Redactor.objects.create(
             username="jdoe",
             first_name="John",

@@ -93,5 +93,9 @@ class RedactorSearchForm(forms.Form):
         max_length=100,
         required=False,
         label="",
-        widget=forms.TextInput(attrs={"placeholder": "Search by first name..."}),
+        widget=forms.TextInput(
+            attrs={
+                "placeholder": "Search by first name..."
+            }
+        ),
     )
