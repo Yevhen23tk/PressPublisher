@@ -1,0 +1,20 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h1 class="display-6 mb-4">Delete Redactor?</h1>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">Yes</button>
+                        <a href="{% url 'news:redactor-list' %}" class="btn btn-secondary ms-2">No</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
