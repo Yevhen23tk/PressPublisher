@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.urls import path
+from django.views.generic import TemplateView
 
 from news.views import (index,
                         NewspaperListView,
@@ -28,6 +29,7 @@ urlpatterns = [
     path('redactors/create/', RedactorCreateView.as_view(), name='redactor-create'),
     path('redactors/<int:pk>/update/', RedactorUpdateView.as_view(), name='redactor-update'),
     path('redactors/<int:pk>/delete/', RedactorDeleteView.as_view(), name='redactor-delete'),
+    path('newspapers/about_us/', TemplateView.as_view(template_name='news/about_us.html'), name='about-us'),
 ]
 
 app_name = "news"

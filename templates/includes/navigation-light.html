@@ -39,14 +39,17 @@
                   </div>
                   News list
                 </h6>
-                <a href="#" class="dropdown-item border-radius-md">
-                  About Us
+                <a href="{% url 'news:newspaper-list' %}" class="dropdown-item border-radius-md">
+                  Newspapers
                 </a>
                 <a href="{% url 'news:redactor-list' %}" class="dropdown-item border-radius-md">
                   Redactors
                 </a>
                 <a href="{% url 'news:topic-list' %}" class="dropdown-item border-radius-md">
                   Topics
+                </a>
+                <a href="{% url 'news:about-us' %}" class="dropdown-item border-radius-md">
+                  About us
                 </a>
                 <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center px-0 mt-3">
                   <div class="d-inline-block">

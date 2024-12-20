@@ -101,13 +101,3 @@ class RedactorSearchForm(forms.Form):
             }
         )
     )
-    # last_name = forms.CharField(
-    #     max_length=100,
-    #     required=False,
-    #     label="",
-    #     widget=forms.TextInput(
-    #         attrs={
-    #             "placeholder": "Search of last name"
-    #         }
-    #     )
-    # )
