@@ -63,17 +63,19 @@
               </div>
               <hr class="vertical dark">
             </div>
-            <div class="col-md-4 position-relative">
-              <div class="p-3 text-center">
-                <a href="{% url 'news:redactor-list' %}">
-                  <h1 class="text-gradient text-primary"> <span id="state2" countTo="{{ num_redactors }}">0</span>+</h1>
-                </a>
-                <a href="{% url 'news:redactor-list' %}"><h5 class="mt-3">Redactors</h5></a>
+              <div class="col-md-4 position-relative">
+                <div class="p-3 text-center">
+                  <a href="{% url 'news:redactor-list' %}">
+                    <h1 class="text-gradient text-primary"> <span id="state2" countTo="{{ num_redactors }}">0</span>+</h1>
+                  </a>
+                  <h5 class="mt-3">
+                    <a href="{% url 'news:redactor-list' %}">Redactors</a>
+                  </h5>
 
-                <p class="text-sm">Our redactors always find interesting things for you.</p>
+                  <p class="text-sm">Our redactors always find interesting things for you.</p>
+                </div>
+                <hr class="vertical dark">
               </div>
-              <hr class="vertical dark">
-            </div>
             <div class="col-md-4">
               <div class="p-3 text-center">
                 <a href="{% url 'news:topic-list' %}">

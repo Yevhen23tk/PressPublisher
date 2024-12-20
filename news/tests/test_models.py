@@ -10,7 +10,7 @@ class RedactorModelTest(TestCase):
             username="jdoe",
             first_name="John",
             last_name="Doe",
-            email="jdoe@example.com"
+            email="jdoe@example.com",
         )
         self.assertEqual(str(redactor), "John Doe")
 
@@ -36,34 +36,31 @@ class NewspaperModelTest(TestCase):
             username="jane_smith",
             first_name="Jane",
             last_name="Smith",
-            email="janesmith@example.com"
+            email="janesmith@example.com",
         )
         self.redactor_bob = Redactor.objects.create(
             username="bob_brown",
             first_name="Bob",
             last_name="Brown",
-            email="bobbrown@example.com"
+            email="bobbrown@example.com",
         )
 
     def test_newspaper_str(self):
         newspaper = Newspaper.objects.create(
-            title="Global News",
-            content="A brief content about global events."
+            title="Global News", content="A brief content about global events."
         )
         self.assertEqual(str(newspaper), "Global News")
 
     def test_default_published_date(self):
         newspaper = Newspaper.objects.create(
-            title="Daily Tech Update",
-            content="All the latest in tech."
+            title="Daily Tech Update", content="All the latest in tech."
         )
         # The default is `now`, which is a datetime with timezone. We only check the date.
         self.assertEqual(newspaper.published_date, localdate())
 
     def test_newspaper_topics(self):
         newspaper = Newspaper.objects.create(
-            title="Science Weekly",
-            content="Focus on recent scientific discoveries."
+            title="Science Weekly", content="Focus on recent scientific discoveries."
         )
         newspaper.topics.set([self.topic_science, self.topic_politics])
         self.assertEqual(newspaper.topics.count(), 2)
@@ -72,8 +69,7 @@ class NewspaperModelTest(TestCase):
 
     def test_newspaper_publishers(self):
         newspaper = Newspaper.objects.create(
-            title="Political Daily",
-            content="Today's political headlines."
+            title="Political Daily", content="Today's political headlines."
         )
         newspaper.publishers.set([self.redactor_jane, self.redactor_bob])
         self.assertEqual(newspaper.publishers.count(), 2)

@@ -29,7 +29,11 @@ class NewspaperUpdateForm(forms.ModelForm):
 
     class Meta:
         model = Newspaper
-        fields = ("title", "content", "topics",)
+        fields = (
+            "title",
+            "content",
+            "topics",
+        )
 
 
 class NewspaperSearchForm(forms.Form):
@@ -37,11 +41,7 @@ class NewspaperSearchForm(forms.Form):
         max_length=100,
         required=False,
         label="",
-        widget=forms.TextInput(
-            attrs={
-                "placeholder": "Search of title"
-            }
-        )
+        widget=forms.TextInput(attrs={"placeholder": "Search of title"}),
     )
 
 
@@ -62,32 +62,30 @@ class TopicSearchForm(forms.Form):
         max_length=100,
         required=False,
         label="",
-        widget=forms.TextInput(
-            attrs={
-                "placeholder": "Search of title"
-            }
-        )
+        widget=forms.TextInput(attrs={"placeholder": "Search of title"}),
     )
 
 
 class RedactorCreateForm(forms.ModelForm):
     class Meta:
         model = Redactor
-        fields = ("first_name",
-                  "last_name",
-                  "username",
-                  "email",
-                  )
+        fields = (
+            "first_name",
+            "last_name",
+            "username",
+            "email",
+        )
 
 
 class RedactorUpdateForm(forms.ModelForm):
     class Meta:
         model = Redactor
-        fields = ("first_name",
-                  "last_name",
-                  "username",
-                  "email",
-                  )
+        fields = (
+            "first_name",
+            "last_name",
+            "username",
+            "email",
+        )
 
 
 class RedactorSearchForm(forms.Form):
@@ -95,9 +93,5 @@ class RedactorSearchForm(forms.Form):
         max_length=100,
         required=False,
         label="",
-        widget=forms.TextInput(
-            attrs={
-                "placeholder": "Search by first name..."
-            }
-        )
+        widget=forms.TextInput(attrs={"placeholder": "Search by first name..."}),
     )

@@ -12,9 +12,7 @@ class LoginRequiredViewsTest(TestCase):
         self.client = Client()
         self.user = User.objects.create_user(username="testuser", password="secret")
         self.newspaper = Newspaper.objects.create(
-            title="Test Paper",
-            content="Test content",
-            published_date=now()
+            title="Test Paper", content="Test content", published_date=now()
         )
         self.create_url = reverse("news:newspaper-create")
         self.list_url = reverse("news:newspaper-list")
@@ -64,7 +62,7 @@ class LoginRequiredViewsTest(TestCase):
         data = {
             "title": "New Title",
             "content": "New content",
-            "published_date": "2024-12-19"
+            "published_date": "2024-12-19",
         }
         response = self.client.post(self.create_url, data=data)
         self.assertRedirects(response, reverse("news:newspaper-list"))

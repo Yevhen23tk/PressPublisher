@@ -5,8 +5,8 @@ from django.db import models
 class Redactor(AbstractUser):
 
     class Meta:
-        verbose_name_plural = 'Redactors'
-        verbose_name = 'Redactor'
+        verbose_name_plural = "Redactors"
+        verbose_name = "Redactor"
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"

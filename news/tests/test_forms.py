@@ -20,7 +20,7 @@ class NewspaperCreationFormTest(TestCase):
             first_name="John",
             last_name="Doe",
             username="johndoe",
-            email="johndoe@example.com"
+            email="johndoe@example.com",
         )
 
     def test_valid_form(self):

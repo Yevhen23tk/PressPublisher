@@ -9,19 +9,15 @@ User = get_user_model()
 class NewspaperSearchTest(TestCase):
     def setUp(self):
         # Create user and log in
-        self.user = User.objects.create_user(
-            username="testuser", password="secret"
-        )
+        self.user = User.objects.create_user(username="testuser", password="secret")
         self.client.login(username="testuser", password="secret")
 
         # Create newspapers
         self.paper1 = Newspaper.objects.create(
-            title="Breaking News",
-            content="Some breaking news content."
+            title="Breaking News", content="Some breaking news content."
         )
         self.paper2 = Newspaper.objects.create(
-            title="Global Update",
-            content="Global news content."
+            title="Global Update", content="Global news content."
         )
         self.url = reverse("news:newspaper-list")
 
@@ -40,9 +36,7 @@ class NewspaperSearchTest(TestCase):
 class TopicSearchTest(TestCase):
     def setUp(self):
         # Create user and log in
-        self.user = User.objects.create_user(
-            username="testuser", password="secret"
-        )
+        self.user = User.objects.create_user(username="testuser", password="secret")
         self.client.login(username="testuser", password="secret")
 
         # Create topics
@@ -65,9 +59,7 @@ class TopicSearchTest(TestCase):
 class RedactorSearchTest(TestCase):
     def setUp(self):
         # Create user and log in
-        self.user = User.objects.create_user(
-            username="testuser", password="secret"
-        )
+        self.user = User.objects.create_user(username="testuser", password="secret")
         self.client.login(username="testuser", password="secret")
 
         # Create redactors
@@ -75,13 +67,13 @@ class RedactorSearchTest(TestCase):
             username="jdoe",
             first_name="John",
             last_name="Doe",
-            email="jdoe@example.com"
+            email="jdoe@example.com",
         )
         self.redactor2 = Redactor.objects.create(
             username="asmith",
             first_name="Alice",
             last_name="Smith",
-            email="asmith@example.com"
+            email="asmith@example.com",
         )
         self.url = reverse("news:redactor-list")
 
