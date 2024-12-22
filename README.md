@@ -6,38 +6,38 @@ It provides features for creating, reading, updating, and deleting records,
 along with search and pagination functionalities. 
 Users must be logged in to access most features, ensuring a secure and personalized experience.
 
-![img_2.png](img_2.png)
+![img_2.png](static/image/img_2.png)
 
 Key Features 
 - User Authentication & Authorization:
   Only logged-in users can access newspaper, topic, and redactor lists, details, and CRUD actions.
-![img_8.png](img_8.png)
+![img_8.png](static/image/img_8.png)
 
 - Newspaper Management:
   Create, update, delete, and list newspapers. Each newspaper can have multiple topics and publishers (redactors).
-![img.png](img.png)
+![img.png](static/image/img.png)
 - 
 - Topic Management:
   Categorize newspapers by topics. Create new topics, update existing ones, and filter newspapers by topic.
-![img_5.png](img_5.png)
+![img_5.png](static/image/img_5.png)
 
 - Redactor Management:
   Manage a staff of redactors (journalists/editors). 
   Keep track of who published which newspaper and search for redactors by their first name, last name, or username.
-![img_3.png](img_3.png)
+![img_3.png](static/image/img_3.png)
 
 - Search & Filters:
   Easily search newspapers by title, topics by name, and redactors by first name, last name, or username.
-![img_6.png](img_6.png)
-![img_9.png](img_9.png)
+![img_6.png](static/image/img_6.png)
+![img_9.png](static/image/img_9.png)
 
 - Pagination:
   Long lists are automatically paginated for a better user experience.
-![img_5.png](img_5.png)
+![img_5.png](static/image/img_5.png)
 
 - Session Tracking:
   The index page tracks the number of visits in a user session, giving insight into user activity.
-![img_2.png](img_2.png)
+![img_2.png](static/image/img_2.png)
 
 Technologies Used
 Backend: Django (Python-based web framework)
@@ -72,7 +72,7 @@ Contributing
 4. Push to the branch (git push origin feature/new-feature).
 5. Open a Pull Request.
 
-![img_7.png](img_7.png)
+![img_7.png](static/image/img_7.png)
 
 DB structure
-![img_10.png](img_10.png)
+![img_10.png](static/image/img_10.png)
