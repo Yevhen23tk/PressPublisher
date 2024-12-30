@@ -1,0 +1,391 @@
+[
+{
+    "model": "news.redactor",
+    "pk": 3,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "johndoe",
+        "first_name": "John",
+        "last_name": "Doe",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-12-04T11:20:47.435Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "news.redactor",
+    "pk": 4,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "janesmith",
+        "first_name": "Jane",
+        "last_name": "Smith",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-12-04T11:20:56.521Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "news.redactor",
+    "pk": 5,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "alicejohnson",
+        "first_name": "Alice",
+        "last_name": "Johnson",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-12-04T11:21:04.235Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "news.redactor",
+    "pk": 6,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "bobbrown",
+        "first_name": "Bob",
+        "last_name": "Brown",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-12-04T11:21:11.819Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "news.redactor",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$4CNYbAQl4ZXwLqeWFb48y7$BZYQJy+rXOFHdSNM5E0BoIn30C8tfdB38xe6TfUxI18=",
+        "last_login": "2024-12-28T18:19:33.191Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "Coco",
+        "last_name": "Jambo",
+        "email": "admin@admin.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-12-19T07:22:36Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "news.redactor",
+    "pk": 8,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "BigGeorge",
+        "first_name": "George",
+        "last_name": "Bush",
+        "email": "georgic@news.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-12-19T18:11:41.597Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "news.redactor",
+    "pk": 9,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$U9ZLUcLBxSl1fggB4RMSKG$y39V0qb4/mMuHzCpTfv6sW46k+3TzK9X9k/ZZIDvK+0=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "user",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-12-28T16:34:13Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 1,
+    "fields": {
+        "name": "Technology"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 2,
+    "fields": {
+        "name": "Health"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 3,
+    "fields": {
+        "name": "Science"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 4,
+    "fields": {
+        "name": "Politics"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 5,
+    "fields": {
+        "name": "Sports"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 6,
+    "fields": {
+        "name": "Cybersecurity"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 7,
+    "fields": {
+        "name": "Space Exploration"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 8,
+    "fields": {
+        "name": "Renewable Energy"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 9,
+    "fields": {
+        "name": "Mental Health"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 10,
+    "fields": {
+        "name": "Fitness"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 11,
+    "fields": {
+        "name": "Public Health"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 12,
+    "fields": {
+        "name": "Biology"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 13,
+    "fields": {
+        "name": "Chemistry"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 14,
+    "fields": {
+        "name": "Physics"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 15,
+    "fields": {
+        "name": "Environmental Science"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 16,
+    "fields": {
+        "name": "Elections"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 17,
+    "fields": {
+        "name": "Entertainment"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 18,
+    "fields": {
+        "name": "Economy"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 19,
+    "fields": {
+        "name": "Education"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 20,
+    "fields": {
+        "name": "Travel"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 21,
+    "fields": {
+        "name": "Culture"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 22,
+    "fields": {
+        "name": "History"
+    }
+},
+{
+    "model": "news.topic",
+    "pk": 23,
+    "fields": {
+        "name": "Innovations"
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 2,
+    "fields": {
+        "title": "Breakthrough in Renewable Energy Technology",
+        "content": "n a major scientific breakthrough, researchers have developed a new solar panel technology that is capable of capturing more than 95% of sunlight, making it the most efficient solar panel in the world. This innovation is expected to revolutionize the renewable energy industry by drastically reducing costs and improving energy output.\r\n\r\nThe development team, based in Germany, revealed that their design uses nanotechnology to capture sunlight from multiple angles, even in low-light conditions. Experts predict that this advancement will accelerate the global transition to clean energy and reduce dependence on fossil fuels.\r\n\r\nThis exciting innovation is scheduled to hit the market by mid-2025, and several companies have already expressed interest in adopting this technology for commercial use.",
+        "published_date": "2024-12-19",
+        "topics": [
+            1,
+            3
+        ],
+        "publishers": [
+            3,
+            4
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 3,
+    "fields": {
+        "title": "Global Efforts to Combat Climate Change Intensify",
+        "content": "In a historic summit held in Tokyo, world leaders have agreed on a new international framework to combat climate change. The agreement includes commitments to reduce carbon emissions by 50% by 2030 and achieve net-zero emissions by 2050.\r\nThe framework introduces stringent measures for industries and provides incentives for businesses to adopt sustainable practices. Environmentalists are calling it \"the most ambitious climate plan ever created.\"\r\nThe summit's success is a ray of hope for environmentalists worldwide, signaling unified action against the looming climate crisis.",
+        "published_date": "2024-12-19",
+        "topics": [
+            3,
+            4
+        ],
+        "publishers": [
+            6,
+            8
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 4,
+    "fields": {
+        "title": "Health Experts Warn About Rising Mental Health Issues",
+        "content": "A recent global survey conducted by the World Health Organization (WHO) revealed that cases of anxiety and depression have risen by 30% over the past three years. Experts attribute this alarming increase to economic instability, climate anxiety, and the aftermath of the pandemic.\r\nGovernments and NGOs are now ramping up mental health programs to address the crisis, including free counseling services and workplace mental health initiatives.\r\n\"Investing in mental health is no longer an option but a necessity,\" said Dr. Clara Weiss, a leading psychologist.",
+        "published_date": "2024-12-19",
+        "topics": [
+            2,
+            4
+        ],
+        "publishers": [
+            4,
+            5
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 5,
+    "fields": {
+        "title": "Scientists Discover Water Reservoirs on the Moon",
+        "content": "In an exciting revelation, NASA's Artemis program has confirmed the existence of water reservoirs beneath the surface of the Moon. This discovery is expected to play a crucial role in establishing permanent lunar colonies.\r\nThe water reservoirs, found near the Moon's south pole, could be used for drinking, farming, and even converting into rocket fuel, drastically reducing the cost of future space missions.\r\n\"This is a game-changer for space exploration,\" said Dr. Ethan Carter, lead researcher of the mission.",
+        "published_date": "2024-12-19",
+        "topics": [
+            1,
+            3
+        ],
+        "publishers": [
+            3,
+            6
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 6,
+    "fields": {
+        "title": "New Study Highlights the Importance of Gut Health",
+        "content": "A groundbreaking study published in the journal Nature reveals the crucial role of gut bacteria in preventing chronic diseases such as diabetes and heart disease.\r\nThe study emphasizes that a diet rich in fiber, fermented foods, and probiotics can significantly improve gut health and overall well-being. Researchers are calling for public health campaigns to educate people about the importance of gut-friendly diets.\r\n\"Your gut is the key to your health,\" said Dr. Lena Martinez, the lead researcher.",
+        "published_date": "2024-12-19",
+        "topics": [
+            2,
+            3
+        ],
+        "publishers": [
+            5,
+            8
+        ]
+    }
+},
+{
+    "model": "news.newspaper",
+    "pk": 7,
+    "fields": {
+        "title": "Artificial Intelligence: Transforming the Workplace",
+        "content": "The rise of Artificial Intelligence (AI) is reshaping workplaces across the globe. From automating routine tasks to assisting in high-level decision-making, AI is becoming an indispensable tool for businesses.\r\nTech giants such as Google and Microsoft are investing billions in AI development, promising to create jobs while enhancing efficiency. However, critics warn about potential job displacement and ethical concerns.\r\nGovernments are now drafting policies to balance AI's advantages with its societal implications.",
+        "published_date": "2024-12-19",
+        "topics": [
+            1,
+            4
+        ],
+        "publishers": [
+            4,
+            5
+        ]
+    }
+}
+]
