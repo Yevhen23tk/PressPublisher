@@ -6,6 +6,9 @@ It provides features for creating, reading, updating, and deleting records,
 along with search and pagination functionalities. 
 Users must be logged in to access most features, ensuring a secure and personalized experience.
 
+Login: user
+Password: TUq4qZQM:bWP_f.
+
 ![img_2.png](static/image/img_2.png)
 
 Key Features 

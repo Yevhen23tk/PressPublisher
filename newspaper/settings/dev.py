@@ -1,12 +1,10 @@
 from .base import *
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost',
-                 '127.0.0.1',
-                 '111.222.333.444',
-                 'mywebsite.example']
+                 '127.0.0.1']
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
