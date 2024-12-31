@@ -137,7 +137,7 @@ STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
-ASSETS_ROOT = "/static/assets/"
+ASSETS_ROOT = "/static/assets"
 
 LOGIN_REDIRECT_URL = "/"
 # LOGIN_URL = '/accounts/login/'
