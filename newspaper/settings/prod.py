@@ -4,9 +4,7 @@ from .base import *
 DEBUG = False
 
 ALLOWED_HOSTS = ['localhost',
-                 '127.0.0.1',
-                 '111.222.333.444',
-                 'mywebsite.example']
+                 '127.0.0.1']
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
