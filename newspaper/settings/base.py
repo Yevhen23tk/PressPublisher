@@ -26,8 +26,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # )
 env_path = BASE_DIR / ".env"
 load_dotenv(dotenv_path=env_path)
+# SECRET_KEY = os.getenv('SECRET_KEY')
+
 
 SECRET_KEY = os.environ.get('SECRET_KEY', "django-insecure-fallback-key")
+
 # SECRET_KEY = os.environ.get('SECRET_KEY', 'default-secret-key')
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
